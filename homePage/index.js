@@ -1,27 +1,22 @@
 import { BLOGS } from "../database/blogsData.js"
 
-// const blogsElement = document.getElementById("blogs")
+const blogElement = document.getElementById("recent-blog-grid")
 
-function renderBlogs() {
-    const recentBlogs = getMostTwoRecentBlogs()
-    // let blogsHtml = ""
-    // recentBlogs.forEach( blog => {
-    //     blogsHtml += `
-    //     <div class="blog-item">
-    //         <img class="blog-img" src="../${blog.imgPath}" alt="${blog.title}">
-    //         <p class="date">${blog.date}</p>
-    //         <h2>${blog.title}</h2>
-    //         <p>${blog.content}</p>
-    //     </div>
-    //     `
-    // })
-    // blogsElement.innerHTML = blogsHtml
+function renderBlog() {
+    const recentBlog = getMostRecentBlog()
+    let blogHtml = `
+        <img class="blog-img" src="../${recentBlog.imgPath}" alt="${recentBlog.title}">
+        <p class="blog-date">${recentBlog.date}</p>
+        <h2 class="blog-title">${recentBlog.title}</h2>
+        <p class="blog-content">${recentBlog.content}</p>
+        `
+    blogElement.innerHTML = blogHtml
 }
 
-function getMostTwoRecentBlogs() {
-    // This function just return the last two elements, if u want to change what is the
-    // most recent blogs, you should change this function only
-    return [ BLOGS[BLOGS.length-1], BLOGS[BLOGS.length-2] ]
+function getMostRecentBlog() {
+    // This function just return the last element, if u want to change what is the
+    // most recent blog, you should change this function only
+    return BLOGS[BLOGS.length-1]
 }
 
-renderBlogs()
+renderBlog()
