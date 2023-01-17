@@ -1,4 +1,4 @@
-const BLOGS = [
+export const BLOGS = [
     {
         imgPath: "images/blog1-img.png",
         date: "JULY 23, 2022",
@@ -36,22 +36,3 @@ const BLOGS = [
         content: "I'm excited to start a new learning journey as a Scrimba Bootcamp student! After several months of learning in the Frontend Developer Career Path.",
     },
 ]
-const LIMITED_LESS_VIEW = 3
-const blogsElement = document.getElementById("blogs")
-
-function renderBlogs() {
-    let blogsHtml = ""
-    BLOGS.forEach( blog => {
-        blogsHtml += `
-        <div class="blog-item">
-            <img class="blog-img" src="${blog.imgPath}" alt="${blog.title}">
-            <p class="date">${blog.date}</p>
-            <h2>${blog.title}</h2>
-            <p>${blog.content}</p>
-        </div>
-        `
-    })
-    blogsElement.innerHTML = blogsHtml
-}
-
-renderBlogs()

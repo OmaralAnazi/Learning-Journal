@@ -92,7 +92,7 @@ li a {
     justify-content: end;
     color: #FFFFFF;
     min-height: 400px;
-    background: black url("images/hero.png");
+    background: black url("../images/hero.png");
     background-position: center;
     background-size: cover;
     padding: 1.75em;
