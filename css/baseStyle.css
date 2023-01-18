@@ -6,6 +6,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
+    color: #282828;
+}
+
+.center-block {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* ============== Typography ============== */
@@ -71,6 +78,29 @@ img {
     width: 100%;
     margin-bottom: 1.25em;
 } 
+
+/* ============== link ============== */
+
+.link,
+.link:checked {
+    color: #282828;
+    font-size: 1.125rem;
+    font-weight: bold;
+    text-decoration: underline;
+    background: none;
+    border: none;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+a:hover,
+a:focus,
+button:hover,
+button:focus {
+    color:red
+}
 
 /* ============== Footer ============== */
 

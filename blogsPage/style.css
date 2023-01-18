@@ -125,8 +125,8 @@ or      (min-width:1220px)  {
 }
 
 @media (min-width:1600px) {
-    html {
-        font-size: 20px;
+    :root {
+        font-size: 24px;
     }
 }
 
@@ -135,3 +135,20 @@ or      (min-width:1220px)  {
         grid-template-columns: repeat(3, minmax(300px, 1fr));
     }
 }
+
+
+/* The following rule is written in the HTML instead of here! */
+
+/* 
+@media (min-width:680px) and (max-width:1011px) {
+    .blogs {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+            "blog-item-1 blog-item-1 blog-item-2 blog-item-2"
+            "........... blog-item-3 blog-item-3 ...........";
+    }
+    #blog-item-1 {grid-area: blog-item-1;}
+    #blog-item-2 {grid-area: blog-item-2;}
+    #blog-item-3 {grid-area: blog-item-3;}
+} 
+*/

@@ -8,6 +8,23 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/baseStyle.css">
         <link rel="stylesheet" href="../blogsPage/style.css">
+
+        <!-- This CSS rule its here in the HTML, so I can enable/disable it
+             easily by the js code -->
+        <style id="newstyle">
+            @media (min-width:680px) and (max-width:1011px) {
+                .blogs {
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-areas: 
+                        "blog-item-1 blog-item-1 blog-item-2 blog-item-2"
+                        "........... blog-item-3 blog-item-3 ...........";
+                }
+                #blog-item-1 {grid-area: blog-item-1;}
+                #blog-item-2 {grid-area: blog-item-2;}
+                #blog-item-3 {grid-area: blog-item-3;}
+            }
+        </style> 
+    
     </head>
 
     <body>
@@ -36,6 +53,8 @@
             <section class="blogs" id="blogs">
                 <!-- feeded by ../blogsPage/index.js -->
             </section>
+            
+            <button id="view-less-more-btn" class="link">View more</button>
 
         </main>
 
